@@ -1,46 +1,37 @@
 import React from 'react'
-import './button.css'
+import './button.scss'
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string
-  /**
-   * How large should the button be?
-   */
+  variants?: 'primary' | 'secondary'
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
   label: string
-  /**
-   * Optional click handler
-   */
+  isFullWidth?: boolean
+  hasBorder?: boolean
   onClick?: () => void
+  isDisabled?: boolean
 }
 
 const Button = ({
-  primary = false,
+  variants = 'primary',
   size = 'medium',
-  backgroundColor,
   label,
+  isFullWidth = false,
+  hasBorder = false,
+  isDisabled = false,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary'
+  const mode = variants === 'primary' ? 'button--primary' : 'button--secondary'
+  const width = isFullWidth ? 'button--fullWidth' : ''
+  const border = hasBorder ? 'button--border' : ''
+  const disabled = isDisabled ? 'button--disabled' : ''
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
-      style={{ backgroundColor }}
+      className={['button', `button--${size}`, mode, width, border, disabled]
+        .join(' ')
+        .trim()}
+      disabled={isDisabled} // Esto desactiva el botón si isDisabled es true
       {...props}
     >
       {label}

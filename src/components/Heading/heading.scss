@@ -1,0 +1,36 @@
+@import './../../styles/globals.scss';
+
+.heading {
+  margin: 0;
+  line-height: 1;
+  width: 100%;
+  font-family: $font-family;
+
+  &--xl {
+    font-size: 5rem;
+  }
+  &--l {
+    font-size: 4rem;
+  }
+  &--m {
+    font-size: 3rem;
+  }
+  &--s {
+    font-size: 2rem;
+  }
+  &--xs {
+    font-size: 1rem;
+  }
+  &--2xs {
+    font-size: 0.8rem;
+  }
+  &--align-left {
+    text-align: left;
+  }
+  &--align-center {
+    text-align: center;
+  }
+  &--align-right {
+    text-align: right;
+  }
+}

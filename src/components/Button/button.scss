@@ -1,0 +1,96 @@
+$width: auto;
+$primary-color: #f77f2f;
+$secondary-color: #6431d3;
+$ternary-color: #ebebeb;
+
+.button {
+  width: $width;
+  font-weight: 700;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: 0.1s all ease-in;
+  border: 2px solid transparent;
+
+  &--border {
+    border-style: solid;
+    box-shadow: 2px 2px 0px 1px;
+
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: 0px 0px 0px 0px;
+    }
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 10px 16px;
+
+    &.button--border {
+      border-width: 1px;
+      box-shadow: 1px 1px 0px 1px;
+    }
+  }
+
+  &--medium {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+
+  &--large {
+    font-size: 18px;
+    padding: 16px 28px;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: $ternary-color;
+    opacity: 0.3;
+  }
+
+  &--primary {
+    color: #000000;
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 8%);
+    }
+
+    &.button--border {
+      border-color: #000000;
+      box-shadow: #000000 2px 2px 0px 1px;
+    }
+
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: 0px 0px 0px 0px;
+    }
+  }
+
+  &--secondary {
+    color: $secondary-color;
+    background-color: lighten($secondary-color, 45%);
+
+    &:hover {
+      background-color: $ternary-color;
+      border-color: darken($secondary-color, 8%);
+    }
+
+    &.button--border {
+      background-color: transparent;
+      border-color: $secondary-color;
+      box-shadow: $secondary-color 2px 2px 0px 1px;
+    }
+
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: 0px 0px 0px 0px;
+    }
+  }
+}

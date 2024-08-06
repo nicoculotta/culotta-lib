@@ -1,2 +1,8 @@
 export { default as Button } from './Button'
+export { default as Card } from './Card'
+export { default as CardDetails } from './CardDetails'
 export { default as Heading } from './Heading'
+export { default as Logo } from './Logo'
+export { default as Pagination } from './Pagination'
+export { default as Spinner } from './Spinner'
+export { default as Table } from './Table'

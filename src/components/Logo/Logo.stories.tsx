@@ -1,27 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import Heading from './Heading'
+import Logo from './Logo'
 
 const meta = {
-  title: 'Components/Heading',
-  component: Heading,
+  title: 'Components/Logo',
+  component: Logo,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   args: {
-    as: 'h3',
-    size: 'm',
+    onClick: fn(),
   },
   argTypes: {},
-} satisfies Meta<typeof Heading>
+} satisfies Meta<typeof Logo>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const MainTitle: Story = {
-  args: {
-    children: 'Heading',
-    as: 'h1',
-  },
-}
+export const DefaultLogo: Story = {}

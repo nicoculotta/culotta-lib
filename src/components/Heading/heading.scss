@@ -4,7 +4,6 @@
   margin: 0;
   line-height: 1;
   width: 100%;
-  font-family: $font-family;
 
   &--xl {
     font-size: 5rem;
@@ -16,7 +15,7 @@
     font-size: 3rem;
   }
   &--s {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   &--xs {
     font-size: 1rem;

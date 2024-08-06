@@ -1,9 +1,9 @@
+@import './../../styles/globals.scss';
+
 $width: auto;
-$primary-color: #f77f2f;
-$secondary-color: #6431d3;
-$ternary-color: #ebebeb;
 
 .button {
+  font-family: 'Quicksand', sans-serif;
   width: $width;
   font-weight: 700;
   border-radius: 5rem;
@@ -12,14 +12,14 @@ $ternary-color: #ebebeb;
   line-height: 1;
   text-transform: uppercase;
   transition: 0.1s all ease-in;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 
   &--border {
     border-style: solid;
-    box-shadow: 2px 2px 0px 1px;
+    box-shadow: 0px 2px 0px 1px;
 
     &:active {
-      transform: translate(1px, 1px);
+      transform: translate(0px, 1px);
       box-shadow: 0px 0px 0px 0px;
     }
   }
@@ -59,38 +59,36 @@ $ternary-color: #ebebeb;
     background-color: $primary-color;
 
     &:hover {
-      background-color: darken($primary-color, 8%);
+      background-color: darken($primary-color, 15%);
     }
 
     &.button--border {
       border-color: #000000;
-      box-shadow: #000000 2px 2px 0px 1px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 0px 0px;
     }
 
     &:active {
-      transform: translate(1px, 1px);
-      box-shadow: 0px 0px 0px 0px;
+      transform: translate(0px, 1px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 0px;
     }
   }
 
   &--secondary {
-    color: $secondary-color;
-    background-color: lighten($secondary-color, 45%);
+    color: #000000;
+    background-color: $secondary-color;
 
     &:hover {
-      background-color: $ternary-color;
-      border-color: darken($secondary-color, 8%);
+      background-color: darken($secondary-color, 5%);
     }
 
     &.button--border {
-      background-color: transparent;
-      border-color: $secondary-color;
-      box-shadow: $secondary-color 2px 2px 0px 1px;
+      border-color: #000000;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 0px 0px;
     }
 
     &:active {
-      transform: translate(1px, 1px);
-      box-shadow: 0px 0px 0px 0px;
+      transform: translate(0px, 1px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 0px;
     }
   }
 }

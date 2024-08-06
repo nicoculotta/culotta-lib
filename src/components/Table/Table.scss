@@ -1,0 +1,29 @@
+@import '../../styles/globals.scss';
+
+.table {
+  width: 100%;
+  border: 1px solid $secondary-color;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.table__header {
+  text-align: left;
+}
+
+.table__header-row {
+  font-weight: bold;
+}
+
+.table__header-cell {
+  padding: 0.5rem;
+  min-width: 60px;
+}
+
+.table__body-cell {
+  padding: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100px;
+}

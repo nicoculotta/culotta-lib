@@ -31,7 +31,7 @@ const Button = ({
       className={['button', `button--${size}`, mode, width, border, disabled]
         .join(' ')
         .trim()}
-      disabled={isDisabled} // Esto desactiva el botón si isDisabled es true
+      disabled={isDisabled}
       {...props}
     >
       {label}

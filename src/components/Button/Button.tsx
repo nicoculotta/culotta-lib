@@ -9,6 +9,7 @@ export interface ButtonProps {
   hasBorder?: boolean
   onClick?: () => void
   isDisabled?: boolean
+  className?: string
 }
 
 const Button = ({
@@ -18,7 +19,7 @@ const Button = ({
   isFullWidth = false,
   hasBorder = false,
   isDisabled = false,
-  ...props
+  className,
 }: ButtonProps) => {
   const mode = variants === 'primary' ? 'button--primary' : 'button--secondary'
   const width = isFullWidth ? 'button--fullWidth' : ''
@@ -28,11 +29,18 @@ const Button = ({
   return (
     <button
       type="button"
-      className={['button', `button--${size}`, mode, width, border, disabled]
+      className={[
+        'button',
+        `button--${size}`,
+        mode,
+        width,
+        border,
+        disabled,
+        className,
+      ]
         .join(' ')
         .trim()}
       disabled={isDisabled}
-      {...props}
     >
       {label}
     </button>

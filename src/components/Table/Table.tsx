@@ -2,8 +2,8 @@ import React from 'react'
 import './Table.scss'
 
 export interface TableProps {
-  headers: string[];
-  data: any[][];
+  headers: string[]
+  data: string[][] | number[][]
 }
 
 const Table = ({ headers, data }: TableProps) => {
@@ -12,7 +12,9 @@ const Table = ({ headers, data }: TableProps) => {
       <thead className="table__header">
         <tr className="table__header-row">
           {headers.map((header, index) => (
-            <th key={index} className="table__header-cell">{header}</th>
+            <th key={index} className="table__header-cell">
+              {header}
+            </th>
           ))}
         </tr>
       </thead>
@@ -20,7 +22,9 @@ const Table = ({ headers, data }: TableProps) => {
         {data.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex} className="table__body-cell">{cell}</td>
+              <td key={cellIndex} className="table__body-cell">
+                {cell}
+              </td>
             ))}
           </tr>
         ))}

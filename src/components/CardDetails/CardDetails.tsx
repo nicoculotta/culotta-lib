@@ -12,7 +12,14 @@ export interface CardDetailsProps {
   height?: number
 }
 
-const CardDetails = ({ name, imageUrl, types, stats, weight, height }: CardDetailsProps) => {
+const CardDetails = ({
+  name,
+  imageUrl,
+  types,
+  stats,
+  weight,
+  height,
+}: CardDetailsProps) => {
   return (
     <>
       <div className="card-details">
@@ -47,7 +54,6 @@ const CardDetails = ({ name, imageUrl, types, stats, weight, height }: CardDetai
         <div className="card-details__stats">
           <Table {...stats} />
         </div>
-
       </div>
     </>
   )

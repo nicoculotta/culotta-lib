@@ -17,7 +17,7 @@ const Card = ({ imageUrl, name, onClick, variant = 'purple' }: CardProps) => {
         src={imageUrl}
         alt={name}
       />
-      <Heading as="h2" size="xs" className="card__name" textAlign='center'>
+      <Heading as="h2" size="xs" className="card__name" textAlign="center">
         {name}
       </Heading>
     </div>

@@ -19,6 +19,6 @@
     "jsx": "react",
     "sourceMap": false
   },
-  "include": ["src"],
+  "include": ["src/**/*", "jest.d.ts"],
   "exclude": ["node_modules", "lib"]
 }

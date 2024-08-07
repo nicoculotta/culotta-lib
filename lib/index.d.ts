@@ -8,8 +8,9 @@ interface ButtonProps {
     hasBorder?: boolean;
     onClick?: () => void;
     isDisabled?: boolean;
+    className?: string;
 }
-declare const Button: ({ variants, size, label, isFullWidth, hasBorder, isDisabled, ...props }: ButtonProps) => React.JSX.Element;
+declare const Button: ({ variants, size, label, isFullWidth, hasBorder, isDisabled, className, }: ButtonProps) => React.JSX.Element;
 
 interface CardProps {
     imageUrl: string;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Table, { TableProps } from '../Table/Table'
 import Heading from '../Heading'
-import './cardDetails.scss'
+import './CardDetails.scss'
 
 export interface CardDetailsProps {
   name: string

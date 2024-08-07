@@ -79,21 +79,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm ci
-      - name: Set up Git user
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      - name: Change version
-        run: npm version patch -m "version %s"
       - name: Build library
         run: npm run build:library
       - name: Publish library
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}.git
-          git push --follow-tags

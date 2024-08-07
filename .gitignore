@@ -29,3 +29,4 @@ lib
 *.sw?
 
 *storybook.log
+storybook-static

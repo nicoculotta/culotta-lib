@@ -17,18 +17,6 @@ describe('Card', () => {
     expect(screen.getByRole('img')).toHaveClass('card__image--purple')
   })
 
-  it('get the correct background color', () => {
-    render(
-      <Card
-        imageUrl="https://via.placeholder.com/150"
-        name="Pikachu"
-        onClick={() => {}}
-        variant="purple"
-      />
-    )
-    expect(screen.getByRole('img')).toHaveClass('card__image--purple')
-  })
-
   it('calls onClick when clicked', () => {
     const mockOnClick = jest.fn()
     render(

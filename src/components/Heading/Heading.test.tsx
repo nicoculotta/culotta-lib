@@ -47,6 +47,26 @@ describe('Heading', () => {
     expect(screen.getByText('Test Heading')).toHaveClass('heading--s')
   })
 
+  it('renders h5, 2xs', () => {
+    render(
+      <Heading as="h5" size="2xs">
+        Test Heading
+      </Heading>
+    )
+    expect(screen.getByText('Test Heading')).toBeInTheDocument()
+    expect(screen.getByText('Test Heading')).toHaveClass('heading--2xs')
+  })
+
+  it('renders h6, xs', () => {
+    render(
+      <Heading as="h6" size="xs">
+        Test Heading
+      </Heading>
+    )
+    expect(screen.getByText('Test Heading')).toBeInTheDocument()
+    expect(screen.getByText('Test Heading')).toHaveClass('heading--xs')
+  })
+
   it('aplica la clase bold cuando isBold es true', () => {
     render(
       <Heading size="m" as="h3" isBold={true}>

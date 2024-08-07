@@ -7,7 +7,7 @@ export interface ButtonProps {
   label: string
   isFullWidth?: boolean
   hasBorder?: boolean
-  onClick?: () => void
+  onClick: () => void
   isDisabled?: boolean
   className?: string
 }
@@ -20,6 +20,7 @@ const Button = ({
   hasBorder = false,
   isDisabled = false,
   className,
+  onClick,
 }: ButtonProps) => {
   const mode = variants === 'primary' ? 'button--primary' : 'button--secondary'
   const width = isFullWidth ? 'button--fullWidth' : ''
@@ -41,6 +42,7 @@ const Button = ({
         .join(' ')
         .trim()}
       disabled={isDisabled}
+      onClick={onClick}
     >
       {label}
     </button>
